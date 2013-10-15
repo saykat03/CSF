@@ -17,7 +17,7 @@
 # DO NOT CHANGE THE FOLLOWING LINE
 print "Problem 1 solution follows:"
 
-from hw2_test import n
+from hw2_test.py import n
 num = 0
 i = 1
 
@@ -26,6 +26,7 @@ while i < (n +1):
       i = (i + 1)
 print num
 
+#the following is another way to get the same answer...
 
 x = 1
 ans = 0
