@@ -3,6 +3,6 @@
 
 from lab2.py import 'n'
 
-for in in range(n):
+for i in range(n):
   if i>0:
   print "Hello World"
