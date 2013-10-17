@@ -1,0 +1,9 @@
+n = 43 
+a, b = 0, 1
+for i in range(n):
+    a,b = b, a + b
+    print "Term " + str(i + 1) + ": " + str(a)
+    if a == str(a):
+        print sum in range(a)
+        if a == sum(a):
+            print sum in range (n + 1)
