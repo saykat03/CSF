@@ -1,0 +1,117 @@
+Name: Katrina Sayre
+Evergreen Login: saykat03
+Computer Science Foundations
+Programming as a Way of Life
+Fall 2013
+Homework 3 
+
+For each problem that requires a written answer, write (or copy-and-paste)
+your answers in this file.  When you are done, you should have replaced all
+the ellipses (the three dots) with your answers.
+
+At the end, you will turn in this file along with your modified
+dna_analysis.py program.
+
+
+Problem 1:
+
+(No answers in this file.)
+
+
+Problem 2:
+
+python dna_analysis.py data/test-small.fastq 
+GC-content: 0.3
+
+python dna_analysis.py data/sample_1.fastq 
+GC-content: 0.43029262963
+
+python dna_analysis.py data/sample_2.fastq 
+GC-content: 0.451051333333
+
+python dna_analysis.py data/sample_3.fastq 
+GC-content: 0.646864112524
+
+python dna_analysis.py data/sample_4.fastq 
+GC-content: 0.347852341166
+
+python dna_analysis.py data/sample_5.fastq 
+GC-content: 0.263157894737
+
+python dna_analysis.py data/sample_6.fastq 
+GC-content: 0.491518518519
+
+
+Problem 3:
+>>> After commenting out seq and linenum:
+== python dna_analysis.py data/sample_1.fastq 
+Traceback (most recent call last):
+  File "dna_analysis.py", line 40, in <module>
+    linenum = linenum + 1
+NameError: name 'linenum' is not defined
+
+>>> seq = all the nucleotides in the input file that have been read so far 
+and linenum = the current line number === if they are commented out the program
+does not know what they were initially defined as and can therefore not run...
+
+>>> After reinstating seq and linenum and commenting out gc_count=0:
+== python dna_analysis.py data/sample_1.fastq 
+Traceback (most recent call last):
+  File "dna_analysis.py", line 66, in <module>
+    gc_count = gc_count + 1
+NameError: name 'gc_count' is not defined
+
+>>>By commenting out gc_count when the program wants to print gc_content 
+(which is defined as: gc_content = float(gc_count) / total_count) the program 
+is unable to print gc_content if gc_count is undefined...
+
+
+Problem 4:
+
+Checking my work:
+test_small.fastq: ATCAGAACTA
+GC: 3/10
+AT: 7/10
+
+python dna_analysis.py data/test-small.fastq 
+GC-content: 0.3
+AT-content: 0.7
+
+python dna_analysis.py data/sample_1.fastq 
+GC-content: 0.43029262963
+AT-content: 0.568993851852
+
+python dna_analysis.py data/sample_2.fastq 
+GC-content: 0.451051333333
+AT-content: 0.548112925926
+
+python dna_analysis.py data/sample_3.fastq 
+GC-content: 0.646864112524
+AT-content: 0.353131156076
+
+python dna_analysis.py data/sample_4.fastq 
+GC-content: 0.347852341166
+AT-content: 0.65214294989
+
+python dna_analysis.py data/sample_5.fastq 
+GC-content: 0.263157894737
+AT-content: 0.723684210526
+
+python dna_analysis.py data/sample_6.fastq 
+GC-content: 0.491518518519
+AT-content: 0.508111111111
+
+
+Collaboration:
+
+Whitney Barber and I collaborated! 
+
+Reflection:
+
+This assignment took me about 1 hour to complete. 
+Loops! Functions! Arguments! 
+I had a bit of trouble getting started but once I understood that I was to 
+run the program using iTerm I was able to get going. 
+Use iTerm! Make sure you remember to uncomment-out your commented-out things!
+And remember that you need to define at again after the cg loop is over!
+
