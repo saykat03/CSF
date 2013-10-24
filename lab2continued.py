@@ -1,7 +1,7 @@
 n = 43
 a, b = 0, 1
 
-series = 3
+series = 'fruit'
 fibonacci = 1
 
 
