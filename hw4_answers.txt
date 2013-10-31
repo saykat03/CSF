@@ -1,0 +1,133 @@
+Name: Katrina Sayre
+Evergreen Login: saykat03
+Computer Science Foundations
+Programming as a Way of Life
+Fall 2013
+Homework 4
+For each problem that requires a written answer, write (or copy-and-paste)
+your answers in this file.  When you are done, you should have replaced all
+the ellipses (the three dots) with your answers.
+
+At the end, you will turn in this file along with your modified
+dna_analysis.py program.
+
+
+################
+## Problem 5: ##
+################
+
+test-small.fastq:
+GC-content: 0.3
+AT-content: 0.7
+G-content: 0.1
+C-content: 0.2
+A-content: 0.5
+T-content: 0.2
+
+
+################
+## Problem 6: ##
+################
+
+test-small.fastq:
+GC-content: 0.3
+AT-content: 0.7
+G-content: 0.1
+C-content: 0.2
+A-content: 0.5
+T-content: 0.2
+Sum Count: 10
+Total Count: 10
+Sequence Length: 10
+
+test-high-gc-1.fastq:
+GC-content: 0.5994
+AT-content: 0.3966
+G-content: 0.3044
+C-content: 0.295
+A-content: 0.19925
+T-content: 0.19735
+Sum Count: 39840.0
+Total Count: 40000
+Sequence Length: 40000
+
+Manual computation (with calculator): 
+0.5994(GC)+0.3966(AT)= 0.996 (Sum total)
+0.3044(G) + 0.295(C) + 0.19925(A) + 0.19735(T) = 0.996 (Sum total) 
+0.996 * 40000 = 39840
+
+The difference in values seems to be a result of a lack of consitency in 
+decimal lengths...i.e. 0.295 vs. 0.19735...that affect the addition...  
+
+
+################
+## Problem 7: ##
+################
+
+sample_1.fastq:
+GC-content: 0.43029262963
+AT-content: 0.568993851852
+G-content: 0.212547148148
+C-content: 0.217745481481
+A-content: 0.285232851852
+T-content: 0.283761
+Sum Count: 26980735.0
+Total Count: 27000000
+Sequence Length: 27000000
+AT/GC Ratio: 1.32234161747
+
+################
+## Problem 8: ##
+################
+
+test-small.fastq 
+GC-content: 0.3
+AT-content: 0.7
+G-content: 0.1
+C-content: 0.2
+A-content: 0.5
+T-content: 0.2
+Sum Count: 10.0
+Total Count: 10
+Sequence Length: 10
+AT/GC Ratio: 2.33333333333
+GC classification: Low
+
+test-moderate-gc-1.fastq
+GC-content: 0.495025
+AT-content: 0.501
+G-content: 0.24545
+C-content: 0.249575
+A-content: 0.251925
+T-content: 0.249075
+Sum Count: 39841.0
+Total Count: 40000
+Sequence Length: 40000
+AT/GC Ratio: 1.01207009747
+GC Classification: Moderate
+
+test-high-gc-2.fastq
+GC-content: 0.79775
+AT-content: 0.198275
+G-content: 0.398875
+C-content: 0.398875
+A-content: 0.0977
+T-content: 0.100575
+Sum Count: 39841.0
+Total Count: 40000
+Sequence Length: 40000
+AT/GC Ratio: 0.248542776559
+GC classification: High
+
+####################
+## Collaboration: ##
+####################
+I collaborated with Whitney Barber and Google!
+
+#################
+## Reflection: ##
+#################
+This assignment took me about an hour and a half.  
+I learned more about indenting with if loops...when to and when to not...
+
+No need to rewrite loops...just copy and modify...
