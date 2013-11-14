@@ -31,12 +31,15 @@ def row_to_edge(row):
 
 def state_edges(election_result_rows):
     """
-    Given a list of election result rows, returns state edges.
-    The input list does has no duplicate states;
+    Given a list of election result rows, return state edges.
+    The input list has no duplicate states;
     that is, each state is represented at most once in the input list.
     """
-    #TODO: Implement this function
-    pass
+    
+    a = {"State" : row_to_edge(election_result_rows[0])}
+    print a
+    return a
+    
 
 
 ################################################################################
