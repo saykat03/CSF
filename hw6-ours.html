@@ -5,12 +5,107 @@ Group xx
 Group Member 1 Katrina Sayre
 Group Member 2 Alexei McConville
 
-Problem 3 (Concept Title)
+Problem 3 Nested Data Structures
 
-Problem 4 (Concept Title)
+Sets, tuples, and dictionaries are all types of data structures.  They can be used individually and can be
+'nested' inside of eachother.  For example, you can have a dictionary containing a list.
 
-Problem 5 (Concept Title)
+"A tuple is a sequence of values. The values can be any type, and they are indexed by
+integers, so in that respect tuples are a lot like lists. The important difference is that tuples
+are immutable.
+A dictionary is like a list, but more general. In a list, the indices have to be integers; in a
+dictionary they can be (almost) any type.
+You can think of a dictionary as a mapping between a set of indices (which are called keys)
+and a set of values. Each key maps to a value. The association of a key and a value is called
+a key-value pair or sometimes an item." - Think Python
+A set can store certain values without any particular order and no repeated values.
 
-Problem 6 (Concept Title)
+Data structure indicators:
+set = set[1,2,3]
+tuple = (  )
+dictionary = {  }
+
+Practice making individual data structures:
+  Make a tuple.
+  Make a set.
+  Make a dictionary.
+  
+Now, practice making nested data structures:
+  Make a set containing a dictionary.
+  Make a set containing a tuple.
+  Make a set containing a dictionary that contains a set.
+
+
+Problem 4 'for' and 'if' statements
+
+"The syntax of a 'for' statement is similar to a function deﬁnition. It has a header that ends
+with a colon and an indented body. The body can contain any number of statements.
+A for statement is sometimes called a loop because the ﬂow of execution runs through the
+body and then loops back to the top."
+
+Example of a 'for' statement:
+
+n = 25
+x = 0
+for i in range(n):
+  x = x + i
+  print x
+  
+Practice making a 'for' loop:
+Assign a variable to some number. Use a 'for' statement to indicate the range of that variable.  Have another variable, 
+which you identify before the 'for' statement.  Increase your second variable by the range of your first (add x+1, 
+x+2,... x+n).
+
+
+Problem 5 Definitions
+
+""A function deﬁnition speciﬁes the name of a new function and the
+sequence of statements that execute when the function is called.
+
+Here is an example:
+def print_lyrics():
+  print "I'm a lumberjack, and I'm okay."
+  print "I sleep all night and I work all day."
+  
+def is a keyword that indicates that this is a function deﬁnition. The name of the function
+is print_lyrics. The rules for function names are the same as for variable names: letters,
+numbers and some punctuation marks are legal, but the ﬁrst character can’t be a number.
+You can’t use a keyword as the name of a function, and you should avoid having a variable
+and a function with the same name.
+The empty parentheses after the name indicate that this function doesn’t take any arguments.
+The ﬁrst line of the function deﬁnition is called the header; the rest is called the body.
+The header has to end with a colon and the body has to be indented. By convention, the
+indentation is always four spaces (see Section 3.14). The body can contain any number of
+statements.""
+
+Practice:
+Define a function that, when called, prints your full name, first, middle, and last - each on separate lines. 
+
+Problem 6 Assert
+An 'assert' call means everything that follows is Boolean (True or False). 'Assert' helps to fix bugs in your program by 
+confirming that all that should be true is, and if not, gives you an 'assertion error'.
+After you define a function, you can use the 'assert' to confirm that the function is working correctly.  Here is an
+example of both defining a function and using 'assert'.
+The following example uses data from files within the folder, hw5.html.
+FILE 1:
+def row_to_edge(row):
+    """
+    Given an election result row or poll data row, returns the Democratic edge
+    in that state.
+    """
+    return float(row["Dem"]) - float(row["Rep"])  
+
+FILE 2:
+def test_row_to_edge():
+    row1 = { "Dem": 5, "Rep": 90 }
+    assert row_to_edge(row1) == -85
+
+    row2 = { "Dem": 57.5, "Rep": 77.5 }
+    assert row_to_edge(row2) == -20
+
+    row3 = { "Dem": 52, "Rep": 49, "Lib": 1 }
+    assert row_to_edge(row3) == 3
+    
+The definition, row_to_edge, in File 1 is written such that the assert statements are true.  
 
 Problem 7 (Concept Title)
