@@ -1,7 +1,7 @@
 Programming as a Way of Life
 Homework 6 Problems
 
-Group xx 
+Group 05 
 Group Member 1 Katrina Sayre
 Group Member 2 Alexei McConville
 
@@ -148,7 +148,7 @@ and calls a function that is identical (in effect) to the function defined and c
 'assert' to test. 
 
 ###################################################################################
-Put it all together:
+Example: 
 
 Create a text file that has the following information, in seperate columns and rows: 
 
@@ -171,7 +171,7 @@ Example answer:
 def first(row):
   return float(row["X"]) - float(row["Y"])
   
-def test_first():
+def test_first( ):
   row1 = { "X": 77, "Y": 5 }
   assert first(row1) == 72
   
@@ -183,7 +183,7 @@ def second(rows):
         first_diction[letter] = result
     return first_diction
 
-def test_first_diction():
+def test_first_diction( ):
     rows1 = [ { 'Letter': 'w', 'X': '77', 'Y': '5' } ] 
     assert first_diction(rows1) == { 'w': '72' }
 
