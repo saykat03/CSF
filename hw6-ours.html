@@ -5,7 +5,8 @@ Group xx
 Group Member 1 Katrina Sayre
 Group Member 2 Alexei McConville
 
-Problem 3 Nested Data Structures
+###################################################################################
+Problem 3: Nested Data Structures
 
 Sets, tuples, and dictionaries are all types of data structures.  They can be used individually and can be
 'nested' inside of eachother.  For example, you can have a dictionary containing a list.
@@ -25,7 +26,7 @@ set = set[1,2,3]
 tuple = (  )
 dictionary = {  }
 
-Practice making individual data structures:
+***Practice making individual data structures:
   Make a tuple.
   Make a set.
   Make a dictionary.
@@ -35,8 +36,8 @@ Now, practice making nested data structures:
   Make a set containing a tuple.
   Make a set containing a dictionary that contains a set.
 
-
-Problem 4 'for' and 'if' statements
+###################################################################################
+Problem 4: 'for' and 'if' statements
 
 "The syntax of a 'for' statement is similar to a function deﬁnition. It has a header that ends
 with a colon and an indented body. The body can contain any number of statements.
@@ -51,13 +52,13 @@ for i in range(n):
   x = x + i
   print x
   
-Practice making a 'for' loop:
+***Practice making a 'for' loop:
 Assign a variable to some number. Use a 'for' statement to indicate the range of that variable.  Have another variable, 
 which you identify before the 'for' statement.  Increase your second variable by the range of your first (add x+1, 
 x+2,... x+n).
 
-
-Problem 5 Definitions
+###################################################################################
+Problem 5: Definitions
 
 ""A function deﬁnition speciﬁes the name of a new function and the
 sequence of statements that execute when the function is called.
@@ -78,15 +79,51 @@ The header has to end with a colon and the body has to be indented. By conventio
 indentation is always four spaces (see Section 3.14). The body can contain any number of
 statements.""
 
-Practice:
+***Practice:
 Define a function that, when called, prints your full name, first, middle, and last - each on separate lines. 
 
-Problem 6 Assert
+###################################################################################
+Problem 6: 'assert'
+
 An 'assert' call means everything that follows is Boolean (True or False). 'Assert' helps to fix bugs in your program by 
 confirming that all that should be true is and, if not, gives you an 'assertion error'.
-After you define a function, you can use the 'assert' to confirm that the function is working correctly.  Here is an
-example of both defining a function and using 'assert':
-(The following example uses data from files within the folder, hw5.html)
+After you define a function, you can use the 'assert' to confirm that the function is working correctly.  
+
+***Practice:
+Define a function, call it, and assert for truthfullness. Debug if necessary. 
+
+###################################################################################
+Problem 7: 'return' and 'pass' 
+
+The 'pass' keyword does nothing - it is handy when you have a function that is not implemented yet, but the body of
+the function cannot be empty - so, until you implement the function 'pass' will stop the interpreter from barking at you.
+example:
+
+def function():
+  pass
+  
+The 'return' keyword works with function defintions; it exits the function and returns a value. 
+example:
+
+def cube(x):
+  return x * x * x
+  
+a = root(7)
+b = root(26)
+
+
+# the function will calculate the cube of a number, the 'return' key will exit the function and return 
+# a value, that value is then assigned to the a, b variables 
+
+***Practice: 
+Define a function and return a value.  
+
+
+###################################################################################
+Example of 'assert', 'return', sets, dictionaries, and function defintions:
+
+
+
 FILE 1:
 def row_to_edge(row):
     """
@@ -97,20 +134,59 @@ def row_to_edge(row):
 
 FILE 2:
 def test_row_to_edge():
-    row1 = { "Dem": 5, "Rep": 90 }
-    assert row_to_edge(row1) == -85
+    row1 = { "Dem": 41.3, "Rep": 55.3 }
+    assert row_to_edge(row1) == -14
 
-    row2 = { "Dem": 57.5, "Rep": 77.5 }
-    assert row_to_edge(row2) == -20
+    row2 = { "Dem": 38.4, "Rep": 60.7 }
+    assert row_to_edge(row2) == -22.3
 
-    row3 = { "Dem": 52, "Rep": 49, "Lib": 1 }
-    assert row_to_edge(row3) == 3
+    row3 = { "Dem": 36.9, "Rep": 60.5}
+    assert row_to_edge(row3) == -23.6
     
-The definition, row_to_edge, in File 1 is written such that the assert statements are true. File 2 defines and calls a 
-function that is identical (in effect) to the function defined and called in File 1.  File 2 then uses 'assert' to test 
-for efficacy. 
+The defined function, row_to_edge, in File 1 is written such that the 'assert' statements are true. File 2 defines 
+and calls a function that is identical (in effect) to the function defined and called in File 1.  File 2 then uses 
+'assert' to test. 
 
-Practice:
-Define a function, call it, and assert for truthfullness. Debug if necessary. 
+###################################################################################
+Put it all together:
 
-Problem 7 (Concept Title)
+Create a text file that has the following information, in seperate columns and rows: 
+
+Letter   X       Y
+w        77      5
+z        88      14
+
+
+Import that information into your program.  
+
+Define a function, call it "first", that subtracts y from x for both letters, w and z.  
+Confirm that it is correct using a test function and 'assert'.
+
+Define another function that creates a dictionary for each letter which contains the name of the letter 
+and the value that is returned by the "first" function. (Your goal output is {'w': 72} for the first row.)
+Confirm that it is working correctly using a test function and 'assert'.
+
+Example answer: 
+
+def first(row):
+  return float(row["X"]) - float(row["Y"])
+  
+def test_first():
+  row1 = { "X": 77, "Y": 5 }
+  assert first(row1) == 72
+  
+def second(rows):  
+    first_diction = { }
+    for row in rows:
+        result = first(row)
+        letter = (row('Letter')
+        first_diction[letter] = result
+    return first_diction
+
+def test_first_diction():
+    rows1 = [ { 'Letter': 'w', 'X': '77', 'Y': '5' } ] 
+    assert first_diction(rows1) == { 'w': '72' }
+
+
+
+
