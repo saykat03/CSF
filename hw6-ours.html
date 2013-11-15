@@ -107,7 +107,9 @@ confirming that all that should be true is and, if not, gives you an 'assertion 
 After you define a function, you can use the 'assert' to confirm that the function is working correctly.  
 
 ~Practice:
-Define a function, call it, and assert for truthfullness. Debug if necessary. 
+Define a function (call it 'square') that finds the square of a number, x. 
+Define a test function (call it 'test_square') that confirms (via 'assert') that your previous 'square' 
+function works properly (give x any value and call your 'square' function - use a whole number).
 
 ###################################################################################
 Problem 7: 'return' and 'pass' 
@@ -119,29 +121,30 @@ example:
 def function():
   pass
   
+  
 The 'return' keyword works with function defintions; it exits the function and returns a value. 
 example:
 
 def cube(x):
   return x * x * x
   
-a = root(7)
-b = root(26)
-
+a = cube(7)
+b = cube(26)
 
 # the function will calculate the cube of a number, the 'return' key will exit the function and return 
-# a value, that value is then assigned to the a, b variables 
+# a value, that value is then assigned to the a, b variables.  
 
 ~Practice: 
-Define a function and return a value.  
+Define a function and pass it.  Define another function and return a value. Feel free to use previously defined 
+functions. 
 
-********** All quoted information is from our textbook, Think Python.
+
+
+**** All quoted information is from our textbook, Think Python.
 
 
 ###################################################################################
 Example of 'assert', 'return', sets, dictionaries, and function defintions:
-
-
 
 FILE 1:
 def row_to_edge(row):
@@ -152,7 +155,7 @@ def row_to_edge(row):
     return float(row["Dem"]) - float(row["Rep"])  
 
 FILE 2:
-def test_row_to_edge():
+def test_row_to_edge( ):
     row1 = { "Dem": 41.3, "Rep": 55.3 }
     assert row_to_edge(row1) == -14
 
@@ -182,10 +185,12 @@ Define a function, call it "first", that subtracts y from x for both letters, w 
 Confirm that it is correct using a test function and 'assert'.
 
 Define another function that creates a dictionary for each letter which contains the name of the letter 
-and the value that is returned by the "first" function. (Your goal output is {'w': 72} for the first row.)
+and the value that is returned by the "first" function. (Your goal output is {'w': '72'} for the first row.)
 Confirm that it is working correctly using a test function and 'assert'.
 
 Example answer: 
+
+import file
 
 def first(row):
   return float(row["X"]) - float(row["Y"])
