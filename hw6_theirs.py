@@ -9,9 +9,9 @@
 # you are done.  When you are done, running this file should compute and
 # print the answers to all the problems.
 
-###
-### Problem 4
-###
+###################################################
+### Problem 4 #####################################
+###################################################
 
 # DO NOT CHANGE THE FOLLOWING LINE
 print "Problem 4 solution follows:"
@@ -31,9 +31,9 @@ b = b == a
 
 print d
 
-###
-### Problem 3
-###
+###################################################
+### Problem 3 #####################################
+###################################################
 
 # DO NOT CHANGE THE FOLLOWING LINE
 print "Problem 3 solution follows:"
@@ -69,9 +69,9 @@ while s <= 2:
         
 # things strings are different...
 
-###
-### Problem 5
-###
+###################################################
+### Problem 5 #####################################
+###################################################
 
 # DO NOT CHANGE THE FOLLOWING LINE
 print "Problem 5 solution follows:"
@@ -89,9 +89,9 @@ print x
 # x is changed a few times, and therefore not always the same.
 # z is, however, always the same, as it was defined only once. 
 
-###
-### Problem 6
-###
+###################################################
+### Problem 6 #####################################
+###################################################
 
 # DO NOT CHANGE THE FOLLOWING LINE
 print "Problem 6 solution follows:"
@@ -104,9 +104,9 @@ t = 37 == 37
 
 print t
 
-###
-### Problem 7
-###
+###################################################
+### Problem 7 #####################################
+###################################################
 
 # DO NOT CHANGE THE FOLLOWING LINE
 print "Problem 7 solution follows:"
@@ -120,6 +120,8 @@ print "This amount of glory is unmatched. Well done, ole' sport, Well done, inde
 ###
 ### Collaboration
 ###
+
+# the order of problem 3 and 4 were switched so that I could use a function defined in problem 4, in problem 3. 
 
 # Collaborated with Whitney Barber
 
