@@ -43,6 +43,15 @@ def state_edges(election_result_rows):
         State_Advantages[state] = edge
     return State_Advantages
     
+#### # This is initializing an empty dic so I can add to it in the loop 
+    answer = {}
+    # The for loop is used to go throgh each item in the list (or rows in this case)
+    for i in range(len(election_result_rows)):        
+        # here is where information is being added into the answer dictionary
+        answer[election_result_rows[i]["State"]] = row_to_edge(election_result_rows[i])
+    # Result is returned
+    return answer ###
+    
 ################################################################################
 # Problem 2: Find the most recent poll row
 ################################################################################
