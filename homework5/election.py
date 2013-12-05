@@ -69,7 +69,39 @@ def most_recent_poll_row(poll_rows, pollster, state):
     specified pollster and state. If no such row exists, returns None.
     """
     #TODO: Implement this function
-    pass
+    l = [ ]
+    # make an empty list
+    
+    for i in poll_rows:
+    # go through the poll_rows and set i equal to each dictionary in the list 
+    
+        state__ = i["State"]
+        # set state = to the dictionaries current state key
+        
+        pollster__ = i["Pollster"]
+        # set pollster = to the dictionaries current pollster key
+        
+        if state == state__ and pollster == pollster__ :
+        # compare state and pollster; if equal, add the entire dictionary to the empty list created earlier
+        
+            l += [i]
+            # if equal, add dict to list. 
+        
+        
+        for i in range(len(l) - 1):
+        # compares the dates    
+            date1 = l[i]["Date"]
+            date2 = l[ i + 1 ]["Date"]
+            call_date = earlier_date(date1, date2)
+            
+            
+            if call_date == False:
+                answer = l[i]
+                
+            else:
+                answer = l[ i + 1 ]
+                
+        return answer
 
 
 ################################################################################
